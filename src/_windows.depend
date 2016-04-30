@@ -1,0 +1,108 @@
+# depslib dependency file v1.0
+1460990054 source:c:\users\gabriel\downloads\cg\src\gluisimple.cpp
+	<string.h>
+	<GL/glui.h>
+
+1152222178 c:\users\gabriel\downloads\cg\include\gl\glui.h
+	<GL/freeglut.h>
+	<GL/openglut.h>
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<cstdlib>
+	<cstdio>
+	<cstring>
+	<string>
+	<vector>
+
+1368294560 c:\users\gabriel\downloads\cg\include\gl\freeglut.h
+	"freeglut_std.h"
+	"freeglut_ext.h"
+
+1368294560 c:\users\gabriel\downloads\cg\include\gl\freeglut_std.h
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1368294560 c:\users\gabriel\downloads\cg\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1368294560 c:\users\gabriel\downloads\cg\include\gl\glut.h
+	"freeglut_std.h"
+
+1460941277 source:c:\users\gabriel\downloads\cg\src\05_triangle_anim.cpp
+	<GL/glut.h>
+
+1380243200 source:c:\users\gabriel\downloads\cg\src\gluiexample.cpp
+	<string.h>
+	<GL/glui.h>
+
+1460931263 source:c:\users\gabriel\downloads\cg\src\teste.cpp
+	<string.h>
+	<GL/glui.h>
+
+1460926053 source:c:\users\gabriel\downloads\cg\src\04_mousekeyboard.cpp
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<GL/glut.h>
+
+1460988062 source:c:\users\gabriel\downloads\cg\src\06_quad_transform.cpp
+	<GL/glut.h>
+	<stdio.h>
+	<stdlib.h>
+
+1409791332 source:c:\users\gabriel\downloads\cg\src\01_quad.cpp
+	<stdio.h>
+	<GL/glut.h>
+
+1460937004 source:c:\users\gabriel\downloads\cg\src\03_quad_color_reshape.cpp
+	<stdio.h>
+	<GL/glut.h>
+
+1460926049 source:c:\users\gabriel\downloads\cg\src\02_quad_color.cpp
+	<stdio.h>
+	<GL/glut.h>
+
+1460994287 source:c:\users\gabriel\downloads\cg\src\base.cpp
+	<stdio.h>
+	<GL/glut.h>
+	<string.h>
+	<GL/glui.h>
+
+1461003291 source:c:\users\gabriel\downloads\cg\src\aula4.cpp
+	<stdio.h>
+	<GL/glut.h>
+	<string.h>
+	<GL/glui.h>
+
+1460926060 source:c:\users\gabriel\downloads\cg\src\07_quad_transform_matrices.cpp
+	<GL/glut.h>
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1461985386 source:c:\users\gabriel\desktop\gabriel\cg\src\curvasinterativas.cpp
+	<GL/glut.h>
+	<stdio.h>
+	"EditaVetor.h"
+
+1368294560 c:\users\gabriel\desktop\gabriel\cg\include\gl\glut.h
+	"freeglut_std.h"
+
+1368294560 c:\users\gabriel\desktop\gabriel\cg\include\gl\freeglut_std.h
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1461982419 c:\users\gabriel\desktop\gabriel\cg\src\include\editavetor.h
+
+1461985735 source:c:\users\gabriel\desktop\gabriel\cg\src\src\editavetor.cpp
+	"EditaVetor.h"
+	<stdio.h>
+
