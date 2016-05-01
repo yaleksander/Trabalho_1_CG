@@ -8,7 +8,7 @@ int ProcuraElemento(float vetorpontos[][2], int quantidadepontos, int x, int y, 
            (vetorpontos[i][1]-tolerancia)<=y &&
            y<=(vetorpontos[i][1]+tolerancia)*/
            x==(int)vetorpontos[i][0] && y==(int)vetorpontos[i][1]
-            //concertar erro de distancia do ponto aqui
+            //concertar erro de distancia do ponto aqui, não funciona se aumentar a tela e as vezes falha
         ){
 
             return i;

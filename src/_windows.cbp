@@ -39,7 +39,11 @@
 			<Add directory="../lib" />
 		</Linker>
 		<Unit filename="CurvasInterativas.cpp" />
+		<Unit filename="include/Bspline.h" />
+		<Unit filename="include/DesenhaCurva.h" />
 		<Unit filename="include/EditaVetor.h" />
+		<Unit filename="src/Bspline.cpp" />
+		<Unit filename="src/DesenhaCurva.cpp" />
 		<Unit filename="src/EditaVetor.cpp" />
 		<Extensions>
 			<code_completion />

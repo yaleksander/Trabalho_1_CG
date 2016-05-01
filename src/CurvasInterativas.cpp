@@ -1,18 +1,20 @@
 #include <GL/glut.h>
 #include <stdio.h>
 #include "EditaVetor.h"
-
+#include "DesenhaCurva.h"
 
 int alturajanela = 600, largurajanela = 600;
 int quantidadepontos = 0;
 float vetorpontos[100][2];
 bool verpoligono = false;
 int posicaoelemento = -1;
+int densidade = 200;
 
 void display(void);
 void init (void);
 void mouse(int button, int state, int x, int y);
 void keyboardPress(unsigned char key, int x, int y);
+void motion(int x, int y );
 
 int main(int argc, char** argv){
     glutInit(&argc, argv);
@@ -24,12 +26,16 @@ int main(int argc, char** argv){
     glutMouseFunc(mouse);
     glutKeyboardFunc( keyboardPress );
     glutDisplayFunc(display);
+    glutMotionFunc( motion );
     glutMainLoop();
     return 0;
 }
 
 void display(void){
     glClear (GL_COLOR_BUFFER_BIT);
+
+    desenhacurva(vetorpontos, quantidadepontos, densidade);
+
     if(verpoligono){
         glColor3f (1.0, 1.0, 1.0);
         glBegin(GL_LINE_LOOP);
@@ -38,6 +44,7 @@ void display(void){
             }
         glEnd();
     }
+
     glColor3f (1.0, 0.0, 0.0);
     glPointSize(10);
     glBegin(GL_POINTS);
@@ -46,6 +53,15 @@ void display(void){
         }
     glEnd();
 
+    glColor3ub( 0, 255, 255 );
+    for(int k = 0 ; k < quantidadepontos; k++){
+        glRasterPos2f( vetorpontos[k][0]+0.1, vetorpontos[k][1]+0.1 );
+        glutBitmapCharacter( GLUT_BITMAP_HELVETICA_18, 'P' );
+        if(k>9){
+            glutBitmapCharacter( GLUT_BITMAP_HELVETICA_18, (char)(48+((int)(k/10))) );
+        }
+        glutBitmapCharacter( GLUT_BITMAP_HELVETICA_18, (char)(48+((int)(k%10))) );
+}
 
     glutSwapBuffers ();
     glutPostRedisplay();
@@ -67,7 +83,8 @@ void mouse(int button, int state, int x, int y){
 
 	if ( button == GLUT_LEFT_BUTTON){
 		if(state == GLUT_DOWN){
-			if(quantidadepontos < 100){
+            posicaoelemento = ProcuraElemento(vetorpontos, quantidadepontos,x*(10.0/largurajanela), y*(10.0/alturajanela), 0.9);
+			if(quantidadepontos < 100 && posicaoelemento == -1){
 			vetorpontos[quantidadepontos][0] = x*(10.0/largurajanela);
 			vetorpontos[quantidadepontos][1] = y*(10.0/alturajanela);
 			quantidadepontos++;
@@ -95,4 +112,12 @@ void keyboardPress(unsigned char key, int x, int y){
             verpoligono = !verpoligono;
         break;
 	}
+}
+
+void motion(int x, int y ){
+    if(posicaoelemento >=0){
+	y = alturajanela - y;
+    vetorpontos[posicaoelemento][0] = x*(10.0/largurajanela);
+	vetorpontos[posicaoelemento][1] = y*(10.0/alturajanela);
+    }
 }

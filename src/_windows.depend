@@ -106,3 +106,39 @@
 	"EditaVetor.h"
 	<stdio.h>
 
+1462070616 source:c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\src\curvasinterativas.cpp
+	<GL/glut.h>
+	<stdio.h>
+	"EditaVetor.h"
+	"DesenhaCurva.h"
+
+1368294560 c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\include\gl\glut.h
+	"freeglut_std.h"
+
+1368294560 c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\include\gl\freeglut_std.h
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1461982419 c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\src\include\editavetor.h
+
+1462057518 source:c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\src\src\editavetor.cpp
+	"EditaVetor.h"
+	<stdio.h>
+
+1462063079 c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\src\include\desenhacurva.h
+
+1462070836 source:c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\src\src\desenhacurva.cpp
+	"DesenhaCurva.h"
+	"Bspline.h"
+
+1462073979 source:c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\src\src\bspline.cpp
+	"Bspline.h"
+	<GL/glut.h>
+	<stdio.h>
+
+1462070912 c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\src\include\bspline.h
+
