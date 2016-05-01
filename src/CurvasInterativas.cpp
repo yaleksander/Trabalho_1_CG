@@ -6,7 +6,7 @@
 int alturajanela = 600, largurajanela = 600;
 int quantidadepontos = 0;
 float vetorpontos[100][2];
-bool verpoligono = false;
+bool verpoligono = false, verpontos = true;
 int posicaoelemento = -1;
 int densidade = 200;
 
@@ -34,6 +34,7 @@ int main(int argc, char** argv){
 void display(void){
     glClear (GL_COLOR_BUFFER_BIT);
 
+    glColor3f(1.0, 1.0, 0.0);
     desenhacurva(vetorpontos, quantidadepontos, densidade);
 
     if(verpoligono){
@@ -45,23 +46,25 @@ void display(void){
         glEnd();
     }
 
-    glColor3f (1.0, 0.0, 0.0);
-    glPointSize(10);
-    glBegin(GL_POINTS);
-        for(int i = 0; i < quantidadepontos; i++){
-            glVertex3f(vetorpontos[i][0], vetorpontos[i][1],0.0);
-        }
-    glEnd();
+    if(verpontos){
+        glColor3f (1.0, 0.0, 0.0);
+        glPointSize(10);
+        glBegin(GL_POINTS);
+            for(int i = 0; i < quantidadepontos; i++){
+                glVertex3f(vetorpontos[i][0], vetorpontos[i][1],0.0);
+            }
+        glEnd();
 
-    glColor3ub( 0, 255, 255 );
-    for(int k = 0 ; k < quantidadepontos; k++){
-        glRasterPos2f( vetorpontos[k][0]+0.1, vetorpontos[k][1]+0.1 );
-        glutBitmapCharacter( GLUT_BITMAP_HELVETICA_18, 'P' );
-        if(k>9){
-            glutBitmapCharacter( GLUT_BITMAP_HELVETICA_18, (char)(48+((int)(k/10))) );
+        glColor3ub( 0, 255, 255 );
+        for(int k = 0 ; k < quantidadepontos; k++){
+            glRasterPos2f( vetorpontos[k][0]+0.1, vetorpontos[k][1]+0.1 );
+            glutBitmapCharacter( GLUT_BITMAP_HELVETICA_18, 'P' );
+            if(k>9){
+                glutBitmapCharacter( GLUT_BITMAP_HELVETICA_18, (char)(48+((int)(k/10))) );
+            }
+            glutBitmapCharacter( GLUT_BITMAP_HELVETICA_18, (char)(48+((int)(k%10))) );
         }
-        glutBitmapCharacter( GLUT_BITMAP_HELVETICA_18, (char)(48+((int)(k%10))) );
-}
+    }
 
     glutSwapBuffers ();
     glutPostRedisplay();
@@ -97,6 +100,7 @@ void mouse(int button, int state, int x, int y){
                 posicaoelemento = ProcuraElemento(vetorpontos, quantidadepontos,x*(10.0/largurajanela), y*(10.0/alturajanela), 0.9);
                 if( posicaoelemento >= 0){
                     quantidadepontos = ApagaElemento(vetorpontos, quantidadepontos, posicaoelemento);
+                    posicaoelemento = -1;
                 }
             }
         }
@@ -111,6 +115,8 @@ void keyboardPress(unsigned char key, int x, int y){
 		case 'p':
             verpoligono = !verpoligono;
         break;
+        case 'b':
+            verpontos = !verpontos;
 	}
 }
 

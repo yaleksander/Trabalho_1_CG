@@ -106,7 +106,7 @@
 	"EditaVetor.h"
 	<stdio.h>
 
-1462070616 source:c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\src\curvasinterativas.cpp
+1462126242 source:c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\src\curvasinterativas.cpp
 	<GL/glut.h>
 	<stdio.h>
 	"EditaVetor.h"
@@ -125,7 +125,7 @@
 
 1461982419 c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\src\include\editavetor.h
 
-1462057518 source:c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\src\src\editavetor.cpp
+1462074100 source:c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\src\src\editavetor.cpp
 	"EditaVetor.h"
 	<stdio.h>
 
@@ -135,10 +135,9 @@
 	"DesenhaCurva.h"
 	"Bspline.h"
 
-1462073979 source:c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\src\src\bspline.cpp
+1462127479 source:c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\src\src\bspline.cpp
 	"Bspline.h"
 	<GL/glut.h>
-	<stdio.h>
 
-1462070912 c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\src\include\bspline.h
+1462127479 c:\users\gabriel\desktop\gabriel\git\trabalho_1_cg\src\include\bspline.h
 
